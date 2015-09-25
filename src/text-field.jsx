@@ -138,7 +138,7 @@ let TextField = React.createClass({
         color: theme.hintColor,
         transition: Transitions.easeOut(),
         bottom: 12,
-        zIndex: 1
+        zIndex: 1,
       },
       input: {
         tapHighlightColor: 'rgba(0,0,0,0)',

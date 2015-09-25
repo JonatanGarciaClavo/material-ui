@@ -19,7 +19,7 @@ let RadioButton = React.createClass({
     iconStyle: React.PropTypes.object,
     labelStyle: React.PropTypes.object,
     onCheck: React.PropTypes.func,
-    unCheckedIcon: React.PropTypes.element
+    unCheckedIcon: React.PropTypes.element,
   },
 
   getTheme() {
