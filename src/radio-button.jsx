@@ -105,8 +105,8 @@ let RadioButton = React.createClass({
 
     let radioButtonElement = (
       <div>
-          {unCheckedElement}
           {checkedElement}
+          {unCheckedElement}
       </div>
     );
 
