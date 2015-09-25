@@ -29,6 +29,7 @@ let TextField = React.createClass({
     floatingLabelStyle: React.PropTypes.object,
     floatingLabelText: React.PropTypes.string,
     fullWidth: React.PropTypes.bool,
+    hintStyle: React.PropTypes.object,
     hintText: React.PropTypes.oneOfType([
       React.PropTypes.string,
       React.PropTypes.element,
@@ -262,7 +263,7 @@ let TextField = React.createClass({
     ) : null;
 
     let hintTextElement = hintText ? (
-      <div style={this.mergeAndPrefix(styles.hint)}>{hintText}</div>
+      <div style={this.mergeAndPrefix(styles.hint, this.props.hintStyle)}>{hintText}</div>
     ) : null;
 
     let floatingLabelTextElement = floatingLabelText ? (
