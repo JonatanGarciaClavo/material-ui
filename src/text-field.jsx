@@ -213,12 +213,17 @@ let TextField = React.createClass({
       styles.floatingLabel.color = ColorManipulator.fade(props.disabled ? theme.disabledTextColor : theme.floatingLabelColor, 0.5);
       styles.floatingLabel.transform = 'perspective(1px) scale(0.75) translate3d(2px, -28px, 0)';
       styles.hint.opacity = 0;
+      styles.hint.zIndex = 0;
     }
 
     if (props.floatingLabelText) {
       styles.hint.opacity = 0;
+      styles.hint.zIndex = 0;
       styles.input.boxSizing = 'border-box';
-      if (this.state.isFocused && !this.state.hasValue) styles.hint.opacity = 1;
+      if (this.state.isFocused && !this.state.hasValue) {
+        styles.hint.opacity = 1;
+        styles.hint.zIndex = 1;
+      }
     }
 
     if (props.style && props.style.height) {
