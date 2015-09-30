@@ -268,7 +268,7 @@ let TextField = React.createClass({
     ) : null;
 
     let hintTextElement = hintText ? (
-      <div style={this.mergeAndPrefix(styles.hint, this.props.hintStyle)}>{hintText}</div>
+      <div style={this.mergeAndPrefix(styles.hint, this.props.hintStyle)} onClick={this._onHintTextClick.bind(this)}>{hintText}</div>
     ) : null;
 
     let floatingLabelTextElement = floatingLabelText ? (
@@ -414,6 +414,10 @@ let TextField = React.createClass({
   _isControlled() {
     return this.props.hasOwnProperty('value') ||
       this.props.hasOwnProperty('valueLink');
+  },
+
+  _onHintTextClick() {
+    this.focus();
   },
 
 });
