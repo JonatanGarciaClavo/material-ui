@@ -268,7 +268,7 @@ let TextField = React.createClass({
     ) : null;
 
     let hintTextElement = hintText ? (
-      <div style={this.mergeAndPrefix(styles.hint, this.props.hintStyle)} onClick={this._onHintTextClick.bind(this)}>{hintText}</div>
+      <div style={this.mergeAndPrefix(styles.hint, this.props.hintStyle)} onClick={this._onHintTextClick}>{hintText}</div>
     ) : null;
 
     let floatingLabelTextElement = floatingLabelText ? (
